@@ -53,6 +53,7 @@ public class BallHandler : MonoBehaviour {
     void ResetGame()
     {
         CircleCount = 1;
+        gameObject.GetComponent<ColorScript>().ChangeColor();
         ChangingColors = ColorScript.colorArray;
         oneColor = ChangingColors[0];
         spr.color = oneColor;
@@ -214,7 +215,7 @@ public class BallHandler : MonoBehaviour {
 
             ballsCount = LevelsHandlerScript.ballsCount;
 
-            oneColor = ChangingColors[Mathf.Clamp(circleNo, 0, 7)];
+            oneColor = ChangingColors[Random.Range(0, 7)];
             spr.color = oneColor;
             splashMat.color = oneColor;
 

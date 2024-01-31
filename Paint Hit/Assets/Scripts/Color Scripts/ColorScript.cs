@@ -15,7 +15,7 @@ public class ColorScript : MonoBehaviour {
         ChangeColor();
 	}
 
-    void ChangeColor()
+    public void ChangeColor()
     {
         int randomC = Random.Range(0, 2);
 
